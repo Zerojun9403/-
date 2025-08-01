@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>귀여운동물사진</title>
+    <title>error확인페이지</title>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -15,7 +15,7 @@
   <body>
     <nav>
       <div class="nav-container">
-         <div class="logo">
+        <div class="logo">
           <a href="index.html">홈페이지</a>
         </div>
         <ul class="nav-menu">
@@ -28,29 +28,33 @@
           <li class="nav-item">
             <a href="userinfo.html" class="nav-link">유저 정보</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="gellery.html" class="nav-link">갤러리</a>
           </li>
           <li class="nav-item">
-            <a href="post.html" class="nav-link">게시물</a>
+            <a href="error.html" class="nav-link">error</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">게시물</a>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container">
-      <h1>갤러리</h1>
-        <p>귀여운 동물 사진들을 랜덤으로 가져와 보세요</p>
-        <div id="dogResult" class="result"></div>
-      </div>
-      <p>귀여운 고양이 사진들을 감상하세요</p>
-      <div style="text-align: center; margin-bottom: 20px">
-        <button id="prevBtn">이전페이지</button>
-        <span id="pageInfo">페이지 1</span>
-        <button id="nextBtn">다음페이지</button>
-      </div>
-      <div id="catResult" class="result"></div>
-    </div>
 
-    <script src="../js/gellery.js"></script>
+    <div class="container">
+      <h1>⚠️에러 테스트</h1>
+      <p>다양한 HTTP 애러 상황을 테스트 해보기</p>
+      <select id="errorSelect">
+        <option value="">에러타입을 선택하세요</option>
+        <option value="404">404</option>
+        <option value="403">403</option>
+        <option value="500">500</option>
+        <option value="timeOut">timeOut</option>
+        <option value="netWork">netWork</option>
+      </select>
+      <button id="errorBtn">에러 확인하기</button>
+      <div id="errorResult" class="result"></div>
+    </div>
+    <script src="../js/error.js"></script>
   </body>
 </html>

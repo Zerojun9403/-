@@ -82,9 +82,8 @@ function getComments(postId) {
     $("#commentsResult").html(
       data.map(
         (comment) => `
-            <h4>${comment.name}</h4>
-            <p>${comment.email}</p>
-            <p>${comment.body}</p>
+            <h4>${comment.name} (<span class="comment-email">${comment.email}</span>)</h4>
+            <p class="comment-body" >${comment.body}</p>
             `
       )
     );

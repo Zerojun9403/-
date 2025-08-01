@@ -22,8 +22,8 @@ $(function () {
 
 function loginCheck() {
   // 1. html 내부에 소비자가 작성한 값을 가져오기 위해서 val() 메서드 활용
-  const username = $("#username").val("");
-  const password = $("#password").val("");
+  const username = $("#username").val();
+  const password = $("#password").val();
 
   if (!username || !password) {
     $("#loginResult").html(
