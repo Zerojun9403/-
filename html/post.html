@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>사용자 정보</title>
+    <title></title>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -35,14 +35,17 @@
         </ul>
       </div>
     </nav>
-
-    <div class="containr">
-      <h1>사용자 정보</h1>
-      <p>사용자 이름을 클릭하면 상세정보를 확인할 수 있습니다.</p>
-      <div class="user-card" id="userList"></div>
-
-      <div id="userResult" class="result"></div>
+    <div class="container">
+      <h1>게시물 목록</h1>
+      <p>게시물 리스트</p>
+      <div id="postResult" class="result"></div>
+      <div style="text-align: center; margin-bottom: 20px">
+        <button id="prevBtn">이전페이지</button>
+        <span id="pageInfo">페이지 1</span>
+        <button id="nextBtn">다음페이지</button>
+      </div>
     </div>
-    <script src="../js/userinfo.js"></script>
+
+    <script src="../js/post.js"></script>
   </body>
 </html>

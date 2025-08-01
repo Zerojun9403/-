@@ -30,15 +30,18 @@ function gatCat() {
   $.get("https://api.thecatapi.com/v1/images/search?limit=10").done(function (
     data
   ) {
-    const catImages = data.map(
-      (cat) => `
+    const catImages = data
+      .map(
+        (cat) => `
       <div class="cat-card">
         <img src ="${cat.url}" 
             class ="cat-detail"
             onclick="showFullImg('${cat.url}')"/>
        </div>     
     `
-    );
+      )
+      .join("");
+
     $("#catResult").html(
       `
        ${catImages};
@@ -48,9 +51,19 @@ function gatCat() {
   });
 }
 // 이미지 클릭시 큰 이미지로 보여주기
+
 function showFullImg(imageUrl) {
+  //prepend() 선택한 요소의 맨 앞에 새로운 요소(태그)를 추가
+  /*
+        .prepend()  = 맨 앞에 새로운 것을 이어서 추가
+        .append()  = 맨 뒤에 새로운 것을 이어서 추가
+        .html()  = 맨 뒤에 새로운 것을 이어서 추가
+    
+    
+    */
   $("#catResult").prepend(
     `
+    
     <div id="abc"class="cat-modal" onclick="closeFullimg()">
         <img src="${imageUrl}" class="cat-detail-show"/>
     </div>
@@ -63,7 +76,7 @@ function showFullImg(imageUrl) {
 // 사용 지양
 // 각 회사 개발가 만듯듯한 명칭으로 함수 메서드 변수이름을 만드는 것이 좋음
 function closeFullimg() {
-  $("#adc").remove();
+  $("#abc").remove();
 }
 
 function randomDog() {
