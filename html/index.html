@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인페이지</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../img/logo.png" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">메인페이지</div>
+        <ul class="nav-menu">
+          <li class="nav-item active">
+            <a href="#" class="nav-link">로그인</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">오늘의 명언</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">유저 정보</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">갤러리</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">게시물</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>로그인</h1>
+      <div class="login-form">
+        <div class="form-group">
+          <label>
+            아이디:
+            <input
+              type="text"
+              id="username"
+              placeholder="아이디를 입력하세요"
+            />
+          </label>
+        </div>
+      </div>
+      <div class="login-form">
+        <div class="form-group">
+          <label>
+            비밀번호:
+            <input
+              type="password"
+              id="password"
+              placeholder="비밀번호를 입력하세요"
+            />
+          </label>
+        </div>
+        <button id="loginBtn">로그인</button>
+        <div id="loginResult" class="result"></div>
+        <div class="welcom-text">
+          <p>테스트 계정 : admin/1234</p>
+          <p>user 계정 : user/1234</p>
+        </div>
+      </div>
+    </div>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
