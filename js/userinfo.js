@@ -15,7 +15,7 @@ function getUsers() {
      * getUserDetail() -> data에서 가져온 유저 목록들을 순회하여
      *                      user 1명씩 보유하고 있는 id를 이용해서
      *                      주소값으로 사용
-     *                      map으로 유저 정보를 하나씩 보여줄 때 유저 데이터에는 id,name,uesrname,email,adderss 등의 데이터
+     *                      map으로 유저 정보를 하나씩 보여줄 때 유저 데이터에는 id,name,uesrname,email,adderss 등의 데이터를
      *                    관리자가 보길 원하는 회원 유저 의 이름을 클릭했을 때
      *                    해당하는 유저의 id값을 getUserDetail() 내부 매개변수값으로 전달하고,
      *                    해당하는 유저의 정보를 확인할 수 있도록 설정
@@ -23,13 +23,6 @@ function getUsers() {
      *
      * userList 라는 변수이름 대신 직접 $("#userList").html() 내부 안에 data.map() 형태를 사용할 수 있지만,
      *              코드의 가독성을 위하여 변수 이름에 담아서 보여질 결과를 분리하여 사용하기도 함.
-     *
-     *
-     *
-     *
-     *
-     *
-     *
      *
      */
     const userList = data

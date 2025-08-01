@@ -88,6 +88,6 @@ function logoutCheck() {
   //3초후 로그아웃 메세지 사라지게 하기
   // 3000 3초
   setTimeout(function () {
-    $("loginResult").html("");
+    $("#loginResult").html("");
   }, 1000);
 }

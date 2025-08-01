@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>메인페이지</title>
+    <title>귀여운동물사진</title>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -17,8 +17,8 @@
       <div class="nav-container">
         <div class="logo">메인페이지</div>
         <ul class="nav-menu">
-          <li class="nav-item active">
-            <a href="#" class="nav-link">로그인</a>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">로그인</a>
           </li>
           <li class="nav-item">
             <a href="quote.html" class="nav-link">오늘의 명언</a>
@@ -26,7 +26,7 @@
           <li class="nav-item">
             <a href="userinfo.html" class="nav-link">유저 정보</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="gellery.html" class="nav-link">갤러리</a>
           </li>
           <li class="nav-item">
@@ -36,40 +36,19 @@
       </div>
     </nav>
     <div class="container">
-      <h1>로그인</h1>
-      <div class="login-form">
-        <div class="form-group">
-          <label>
-            아이디:
-            <input
-              type="text"
-              id="username"
-              placeholder="아이디를 입력하세요"
-            />
-          </label>
-        </div>
-      </div>
-      <div class="login-form">
-        <div class="form-group">
-          <label>
-            비밀번호:
-            <input
-              type="password"
-              id="password"
-              placeholder="비밀번호를 입력하세요"
-            />
-          </label>
-        </div>
-        <button id="loginBtn">로그인</button>
-        <button id="logoutBtn" style="display: none">로그아웃</button>
+      <h1>갤러리</h1>
+      <p>귀여운 동물 사진들을 랜덤으로 가져와 보세요</p>
+      <div id="dogResult" class="result"></div>
 
-        <div id="loginResult" class="result"></div>
-        <div class="welcom-text">
-          <p>테스트 계정 : admin/1234</p>
-          <p>user 계정 : user/1234</p>
-        </div>
+      <p>귀여운 고양이 사진들을 감상하세요</p>
+      <div style="text-align: center; margin-bottom: 20px">
+        <button id="prevBtn">이전페이지</button>
+        <span id="pageInfo">페이지 1</span>
+        <button id="nextBtn">다음페이지</button>
       </div>
+      <div id="catResult" class="result"></div>
     </div>
-    <script src="../js/index.js"></script>
+
+    <script src="../js/gellery.js"></script>
   </body>
 </html>
