@@ -162,6 +162,19 @@ button:hover {
   border-radius: 8px;
   background: #f9f9f9;
 }
+.user-detail {
+  cursor: pointer;
+  color: #0076ff;
+  text-decoration: underline;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.user-detail:hover {
+  background-color: #f8f9fa;
+  text-decoration: none;
+}
 
 img {
   max-width: 100%;
