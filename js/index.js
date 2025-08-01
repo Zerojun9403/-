@@ -38,35 +38,33 @@ function loginCheck() {
   $("#loginResult").html(
     `<div class="loading"> 로그인 중 입니다.......</div> `
   );
+  // $.get  이용해서 json에 해당하는 username 과 password로 일치하는지 확인
+  $.get("../json/userinfo.json").done(function (data) {
+    if (data.users[username] && data.users[username].password === password) {
+      // 1. form-group 숨김처리, loginBtn -> 로그아웃 버튼으로 변경
+      // 2. 로그아웃 버튼 클릭했을 경우 form-group 보이고 로그인 버튼 변경
+      $(".form-group").hide();
+      $("#loginBtn").hide();
+      $("#logoutBtn").show();
 
-  if (
-    (username === "admin" && password === "1234") ||
-    (username === "user" && password === "1234")
-  ) {
-    // 1. form-group 숨김처리, loginBtn -> 로그아웃 버튼으로 변경
-    // 2. 로그아웃 버튼 클릭했을 경우 form-group 보이고 로그인 버튼 변경
-
-    $("#loginResult").html(
-      `
+      $("#loginResult").html(
+        `
             <div class="success">
             <p> <strong> 로그인 성공</strong></p>
             <p> ${username}님, 환영합니다.</strong></p>
             </div>    
             `
-    );
-  } else {
-    $("#loginResult").html(
-      `
-            <div class="success">
+      );
+    } else {
+      $("#loginResult").html(
+        `
+            <div class="error">
             아이디 또는 비밀번호가 일치하지 않습니다. 
             </div>    
             `
-    );
-
-    $(".form-group").hide();
-    $("#loginBtn").hide();
-    $("#logoutBtn").show();
-  }
+      );
+    }
+  });
 }
 
 function logoutCheck() {
@@ -91,5 +89,5 @@ function logoutCheck() {
   // 3000 3초
   setTimeout(function () {
     $("loginResult").html("");
-  }, 3000);
+  }, 1000);
 }

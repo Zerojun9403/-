@@ -1,0 +1,22 @@
+{
+  "users": {
+    "admin": {
+      "password": "1234",
+      "name": "관리자",
+      "email": "admin@example.com",
+      "role": "administrator"
+    },
+    "user": {
+      "password": "1234",
+      "name": "일반사용자",
+      "email": "user@example.com",
+      "role": "user"
+    },
+    "guest": {
+      "password": "0000",
+      "name": "게스트",
+      "email": "guest@example.com",
+      "role": "guest"
+    }
+  }
+}
