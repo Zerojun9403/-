@@ -63,7 +63,7 @@ function getPosts() {
       (post) =>
         `
         <div class="success">
-        <div class="post-item" onclick=" getComments(${post.id} ">
+        <div class="post-item" onclick="getComments(${post.id})">
             <h4>${post.id}. ${post.title}</h4>
             <p> ${post.body}</p>
         </div>
@@ -81,10 +81,10 @@ function getComments(postId) {
   ).done(function (data) {
     $("#commentsResult").html(
       data.map(
-        (Comment) => `
-            <h4>${Comment.name}</h4>
-            <p>${Comment.email}</p>
-            <p>${Comment.body}</p>
+        (comment) => `
+            <h4>${comment.name}</h4>
+            <p>${comment.email}</p>
+            <p>${comment.body}</p>
             `
       )
     );
